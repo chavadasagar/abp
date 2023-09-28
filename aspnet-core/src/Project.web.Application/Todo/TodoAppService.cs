@@ -15,5 +15,10 @@ namespace Project.web.Todo
         public TodoAppService(IRepository<Todo, int> repository) : base(repository)
         {
         }
+
+        public override Task<TodoDto> CreateAsync(CreateTodoDto input)
+        {
+            return base.CreateAsync(input);
+        }
     }
 }

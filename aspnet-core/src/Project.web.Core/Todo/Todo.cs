@@ -1,4 +1,5 @@
 ﻿using Abp.MultiTenancy;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Project.web.Authorization.Users;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,19 @@ namespace Project.web.Todo
     {
         public Todo()
         {
-            
+
         }
 
-        public Todo(string name,string isactive)
+        public Todo(string name, string isactive)
         {
-            
+
+        }
+
+        public string Name { get; set; }
+
+        public bool IsActive
+        {
+            get; set;
         }
     }
 }
