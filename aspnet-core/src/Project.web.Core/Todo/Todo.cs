@@ -1,4 +1,6 @@
-﻿using Abp.MultiTenancy;
+﻿using Abp.Domain.Entities;
+using Abp.Domain.Entities.Auditing;
+using Abp.MultiTenancy;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Project.web.Authorization.Users;
 using System;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Project.web.Todo
 {
-    public class Todo : AbpTenant<User>
+    public class Todo : Entity<int>
     {
         public Todo()
         {

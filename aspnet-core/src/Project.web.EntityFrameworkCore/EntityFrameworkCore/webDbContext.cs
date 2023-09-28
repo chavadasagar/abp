@@ -9,7 +9,9 @@ namespace Project.web.EntityFrameworkCore
     public class webDbContext : AbpZeroDbContext<Tenant, Role, User, webDbContext>
     {
         /* Define a DbSet for each entity of the application */
-        
+        public DbSet<Todo.Todo> Todo { get; set; }
+
+
         public webDbContext(DbContextOptions<webDbContext> options)
             : base(options)
         {
