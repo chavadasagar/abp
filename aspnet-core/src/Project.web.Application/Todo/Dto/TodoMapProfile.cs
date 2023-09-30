@@ -7,6 +7,7 @@ namespace Project.web.Todo.Dto
         public TodoMapProfile()
         {
             CreateMap<CreateTodoDto, Todo>().ReverseMap();
+            CreateMap<TodoDto, Todo>().ReverseMap();
         }
     }
 }

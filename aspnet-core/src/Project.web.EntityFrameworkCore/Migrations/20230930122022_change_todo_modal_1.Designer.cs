@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project.web.EntityFrameworkCore;
 
@@ -11,9 +12,11 @@ using Project.web.EntityFrameworkCore;
 namespace Project.web.Migrations
 {
     [DbContext(typeof(webDbContext))]
-    partial class webDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230930122022_change_todo_modal_1")]
+    partial class change_todo_modal_1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
